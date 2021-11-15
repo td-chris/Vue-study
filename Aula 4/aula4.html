@@ -7,15 +7,29 @@
     <title>Aula 4</title>
 </head>
 <body>
+    <div id="app">
+        <ul>
+            <li v-for="item in linguagens">
+                {{ item.nome }}
+            </li>
+        </ul>
+    </div>
     
 
+    
     <script src="https://unpkg.com/vue"></script>
 
     <script>
         var app = new Vue({
             el: "#app",
             data: {
-                
+                linguagens: [
+                    {nome: "JavaScript"},
+                    {nome: "PHP"},
+                    {nome: "C#"},
+                    {nome: "Java"},
+                    {nome: "Python"},
+                ]                
             }
         })
     </script>
