@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 6</title>
+    
+    <style media="screen">
+        .red{
+            color: red;
+        }
+
+        .green{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>V-bind</h1>
+
+        <img v-bind:src="imagem" :alt="alt">
+
+        <p :class="classCss">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor sed natus tempore quae cumque commodi ullam repellat illo, cupiditate qui ipsa quibusdam fugiat doloribus voluptas animi nostrum assumenda fuga modi?</p>
+    </div>
+    
+
+    <script src="https://unpkg.com/vue"></script>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                imagem: "https://www.dotcom-monitor.com/blog/wp-content/uploads/sites/3/2020/05/Vue-logo-1.png",
+                alt: "vue.js is awesome",
+                classCss: "red",
+            }
+        })
+    </script>
+</body>
+</html>
