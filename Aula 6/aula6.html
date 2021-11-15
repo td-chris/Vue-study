@@ -4,54 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 5</title>
+    <title>Aula 6</title>
+    
+    <style media="screen">
+        .red{
+            color: red;
+        }
+
+        .green{
+            color: green;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
-        <h1>Formulario com v-model</h1>
+        <h1>V-bind</h1>
 
-        <label for="">Nome:</label>
-        <input type="text" v-model="nome">
-        
-        <br><br>
+        <img v-bind:src="imagem" :alt="alt">
 
-        <label for="">Telefone:</label>
-        <input type="text" v-model="telefone">
-        
-        <br><br>
-
-        <label for="">Deseja receber nossas novidades?</label>
-        <input type="radio" value="Sim" v-model="novidades"> Sim
-        <input type="radio" value="Nao" v-model="novidades"> Não
-        
-        <br><br>
-
-        <label for="">Interesses:</label> <br>
-        <input type="checkbox" value="Futebol" v-model="interesses"> Futebol <br>
-        <input type="checkbox" value="Formula 1" v-model="interesses"> Formula 1 <br>
-        <input type="checkbox" value="Corrida" v-model="interesses"> Corrida <br>
-        
-        <br><br>
-
-        <label for="">Como nos conheceu?</label>
-        <select v-model="conheceu">
-            <option value="">Escolha:</option>
-            <option value="Google">Google</option>
-            <option value="TV">TV</option>
-            <option value="Revista">Revista</option>
-        </select>
-        
-        <br><br>
-
-        <button>Enviar</button>
-
-        <hr>
-
-        Nome: {{ nome }} <br>
-        Telefone: {{ telefone }} <br>
-        Novidades: {{ novidades }} <br>
-        Interesses: {{ interesses }} <br>
-        Como nos conheceu? {{ conheceu }} <br>
+        <p :class="classCss">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor sed natus tempore quae cumque commodi ullam repellat illo, cupiditate qui ipsa quibusdam fugiat doloribus voluptas animi nostrum assumenda fuga modi?</p>
     </div>
     
 
@@ -61,11 +32,9 @@
         var app = new Vue({
             el: "#app",
             data: {
-                nome: "",
-                telefone: "",
-                novidades: "",
-                interesses: [],
-                conheceu: "",
+                imagem: "https://www.dotcom-monitor.com/blog/wp-content/uploads/sites/3/2020/05/Vue-logo-1.png",
+                alt: "vue.js is awesome",
+                classCss: "red",
             }
         })
     </script>
