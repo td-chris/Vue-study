@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 3 - Diretivas</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <!-- exemplos -->
+        <!-- <h1 v-if="status">{{ titulo }}</h1> -->
+
+        <!-- v-show vs v-if -->
+        <!-- Com o v-show o codigo continua na pagina mas com display none -->
+        <!-- <h1 v-show="status">{{ titulo }}</h1> -->
+        <!-- <p v-show="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est in facere obcaecati corrupti veritatis, necessitatibus harum nostrum perspiciatis eos! Quam maxime quasi nulla minima cupiditate reprehenderit non aliquid est ullam?</p> -->
+    
+        <!-- QUando utilizamos o v-else ele só apresenta se a condição for falsa -->
+        <!-- <p v-else="texto">não existe texto</p> -->
+        
+
+        <h1>{{ titulo }}</h1>
+
+        <div v-if="usuario.id == 1">
+            ID: {{ usuario.id }},<br>
+            Nome: {{ usuario.nome }}, <br>
+            Profissão: {{ usuario.profissao }}
+        </div>
+        <div v-else>
+            Nenhum usuario com id igual a 1!
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                status: true,
+                texto: true,
+                titulo: "Aula 03 - Diretivas",
+                usuario: {
+                    id: 2,
+                    nome: "John Snow",
+                    profissao: "Ator"
+                }
+            }
+        });
+    </script>
+    
+</body>
+</html>
